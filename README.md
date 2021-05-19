@@ -7,3 +7,4 @@ This website generates a QR Code for your link instantly(even before you blink!)
 3. JAVASCRIPT(qrious)
 
 ## Website link
+https://dharven.github.io/QR-Code-Generator/
