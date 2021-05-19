@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Developer | Dharven Doshi</title>
+	<link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./n.png" type="image/x-icon" />
+</head>
+<body>
+	 <!--
+	Another way of building this is to use google charts.
+	You can check more info over here: https://developers.google.com/chart/infographics/docs/qr_codes
+
+	This QR code generator is made by dharven doshi.
+	You can scan my QR code for the linkedin profile or you can copy the link.
+-->
+	<h3  class="h"><span style="color: #8c52ff;">QR </span>Code Generator</h3>
+        <div style="text-align:center;">
+          <span style="font-size:20px;">Enter Link: </span><input id="qr-text" type="text" value="https://www.linkedin.com/in/dharven-doshi-a497021b0/"/>
+</div>
+        <br/>
+        <div style="text-align:center;">
+            <button class="qr-btn" onclick="generateQRCode()">Submit</button>
+        </div>
+        <br/>
+        <p id="qr-result" style="text-align:center;">This is deault QR code:</p>
+        <canvas id="qr-code" style="align:center;"></canvas>
+
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js">
+
+</script>
+<script>
+var qr;
+			(function() {
+                    qr = new QRious({
+                    element: document.getElementById('qr-code'),
+                    size: 200,
+                    value: 'https://www.linkedin.com/in/dharven-doshi-a497021b0/'
+                });
+            })();
+
+            function generateQRCode() {
+               var qrtext = document.getElementById("qr-text").value;
+                document.getElementById("qr-result").innerHTML = "QR code for " + qrtext +":";
+                alert(qrtext);
+                qr.set({
+                    foreground: 'black',
+                    size: 200,
+                    value: qrtext
+                });
+            }
+
+
+</script>
+</body>
+</html>
